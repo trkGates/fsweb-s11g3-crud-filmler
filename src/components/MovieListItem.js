@@ -15,7 +15,7 @@ const MovieListItem = (props) => {
           to={`/movies/${id}`}
           className="myButton bg-blue-600 hover:bg-blue-500"
         >
-          {id}Detay
+          Detay
         </Link>
       </td>
     </tr>
