@@ -24,6 +24,7 @@
     "frontend": "react-scripts start",
     "start": "fkill :9000 :3000 -s && concurrently \"npm:backend\" \"npm:frontend\"",
     "test": "react-scripts test",
+    "build": "yarn run build:css && webpack --mode production",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -19,6 +19,7 @@ const App = (props) => {
       .get("http://localhost:9000/api/movies")
       .then((res) => {
         setMovies(res.data);
+       
       })
       .catch((err) => {
         console.log(err);
