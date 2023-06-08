@@ -27,7 +27,7 @@ const AddMovieForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:9000/api/movies", movie)
+      .post("https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies", movie)
       .then((res) => {
         console.log("Veri başarıyla eklendi.");
         push(`/movies/`);

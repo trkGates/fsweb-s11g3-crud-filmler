@@ -28,7 +28,10 @@ const EditMovieForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:9000/api/movies/${id}`, movie)
+      .put(
+        `https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies/${id}`,
+        movie
+      )
       .then((res) => {
         setMovies(res.data);
         push(`/movies/${id}`);

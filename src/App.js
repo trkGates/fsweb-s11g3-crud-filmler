@@ -16,10 +16,9 @@ const App = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9000/api/movies")
+      .get("https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies")
       .then((res) => {
         setMovies(res.data);
-       
       })
       .catch((err) => {
         console.log(err);
@@ -28,7 +27,7 @@ const App = (props) => {
 
   const deleteMovie = (id) => {
     axios
-      .delete(`http://localhost:9000/api/movies/${id}`)
+      .delete(`https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies/${id}`)
       .then((res) => {
         setMovies(movies.filter((movie) => movie.id !== id));
       })

@@ -1,5 +1,5 @@
-const { nanoid } = require("nanoid")
-const moment = require("moment")
+const { nanoid } = require("nanoid");
+const moment = require("moment");
 
 let data;
 
@@ -11,7 +11,8 @@ const resetData = () => {
       director: "Francis Ford Coppola",
       metascore: 100,
       genre: "Drama",
-      description: "War hero Michael is the prodigal son of aging but fearsome crime patriarch Don Vito Corleone. When Michael returns home only to be thrust into an all-too-familiar world of hitmen, corrupt cops, and simmering mafia rivalries, he is forced to choose between his own path and the Corleone family legacy."
+      description:
+        "War hero Michael is the prodigal son of aging but fearsome crime patriarch Don Vito Corleone. When Michael returns home only to be thrust into an all-too-familiar world of hitmen, corrupt cops, and simmering mafia rivalries, he is forced to choose between his own path and the Corleone family legacy.",
     },
     {
       id: nanoid(5),
@@ -19,7 +20,8 @@ const resetData = () => {
       director: "George Lucas",
       metascore: 92,
       genre: "Scifi",
-      description: "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader."
+      description:
+        "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
     },
     {
       id: nanoid(5),
@@ -27,7 +29,8 @@ const resetData = () => {
       director: "Peter Jackson",
       metascore: 92,
       genre: "Fantasy",
-      description: "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
+      description:
+        "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     },
     {
       id: nanoid(5),
@@ -35,7 +38,8 @@ const resetData = () => {
       director: "James Cameron",
       metascore: 94,
       genre: "Action",
-      description: "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son, John Connor, from a more advanced and powerful cyborg."
+      description:
+        "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son, John Connor, from a more advanced and powerful cyborg.",
     },
     {
       id: nanoid(5),
@@ -43,7 +47,8 @@ const resetData = () => {
       director: "The Farely Brothers",
       metascore: 76,
       genre: "Comedy",
-      description: "After a woman leaves a briefcase at the airport terminal, a dumb limo driver and his dumber friend set out on a hilarious cross-country road trip to Aspen to return it."
+      description:
+        "After a woman leaves a briefcase at the airport terminal, a dumb limo driver and his dumber friend set out on a hilarious cross-country road trip to Aspen to return it.",
     },
     {
       id: nanoid(5),
@@ -51,39 +56,41 @@ const resetData = () => {
       director: "George P. Cosmatos",
       metascore: 89,
       genre: "Drama",
-      description: "A successful lawman's plans to retire anonymously in Tombstone, Arizona are disrupted by the kind of outlaws he was famous for eliminating."
-    }]
-}
+      description:
+        "A successful lawman's plans to retire anonymously in Tombstone, Arizona are disrupted by the kind of outlaws he was famous for eliminating.",
+    },
+  ];
+};
 
-resetData()
+resetData();
 
 const getAll = () => {
-  return data
-}
+  return data;
+};
 
-const getById = id => {
-  return data.find(d => d.id === id)
-}
+const getById = (id) => {
+  return data.find((d) => d.id === id);
+};
 
-const create = item => {
-  data.push({ id: nanoid(5), createdAt:moment().format(), ...item })
-  return data
-}
+const create = (item) => {
+  data.push({ id: nanoid(5), createdAt: moment().format(), ...item });
+  return data;
+};
 
 const edit = (id, item) => {
-  data = data.map(d => {
-    return (d.id === id) ? {...d, ...item} : d
+  data = data.map((d) => {
+    return d.id === id ? { ...d, ...item } : d;
   });
 
-  return data
-}
+  return data;
+};
 
-const remove = id => {
-  data = data.filter(d => {
-    return d.id !== id
-  })
-  return data
-}
+const remove = (id) => {
+  data = data.filter((d) => {
+    return d.id !== id;
+  });
+  return data;
+};
 
 module.exports = {
   getAll,
@@ -91,5 +98,5 @@ module.exports = {
   create,
   edit,
   remove,
-  resetData // only tests use this
-}
+  resetData, // only tests use this
+};

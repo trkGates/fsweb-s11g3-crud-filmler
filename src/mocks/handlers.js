@@ -37,9 +37,9 @@ function remove(req, res, ctx) {
 }
 
 export const handlers = [
-  rest.get('http://localhost:9000/api/movies', getAll),
-  rest.get('http://localhost:9000/api/movies/:id', getById),
-  rest.post('http://localhost:9000/api/movies', create),
-  rest.put('http://localhost:9000/api/movies/:id', edit),
-  rest.delete('http://localhost:9000/api/movies/:id', remove)
+  rest.get('https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies', getAll),
+  rest.get('https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies/:id', getById),
+  rest.post('https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies', create),
+  rest.put('https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies/:id', edit),
+  rest.delete('https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies/:id', remove)
 ]

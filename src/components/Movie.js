@@ -12,7 +12,7 @@ const Movie = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9000/api/movies/${id}`)
+      .get(`https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies/${id}`)
       .then((res) => {
         setMovie(res.data);
       })
@@ -23,7 +23,7 @@ const Movie = (props) => {
 
   const deleteMovie = (id) => {
     axios
-      .delete(`http://localhost:9000/api/movies/${id}`)
+      .delete(`https://6481a7ce29fa1c5c5031d1c7.mockapi.io/api/movies/${id}`)
       .then((res) => {
         push("/movies");
         BaşarıylaSilindi();
